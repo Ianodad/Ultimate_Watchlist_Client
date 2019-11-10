@@ -6,7 +6,7 @@ import Login from "./components/Login";
 
 const App = () => {
 	return (
-		<main className='container'>
+		<main className='container-fluid'>
 			<Route path='/' component={Login}></Route>
 			{/* <Route path='/movies' component={Movies}></Route>
 		<Route path='/not-found' component={NotFound}></Route> */}
