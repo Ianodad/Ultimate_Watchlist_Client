@@ -16,7 +16,7 @@ const Input = ({ name, type, value, handleChange, placeholder, error }) => {
 				className='form-control rounded-pill border-0 shadow-sm px-4'
 			/>
 			<div className='error text-danger text-center'>
-				<ins>{error}</ins>
+				<em>{error}</em>
 			</div>
 		</div>
 	);

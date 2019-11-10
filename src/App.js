@@ -1,15 +1,21 @@
 import React from "react";
 
-import { Route } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 import Login from "./components/Login";
+import Movies from "./components/Movies";
+import NotFound from "./components/NotFound";
 
 const App = () => {
 	return (
 		<main className='container-fluid'>
-			<Route path='/' component={Login}></Route>
-			{/* <Route path='/movies' component={Movies}></Route>
-		<Route path='/not-found' component={NotFound}></Route> */}
+			<Switch>
+				{/* <Route path='/products/:id' component={MovieDetails} /> */}
+				<Route path='/movies' render={props => <Movies {...props} />} />
+				<Route path='/not-found' component={NotFound}></Route>
+				<Route path='/' exact component={Login}></Route>
+				<Redirect to='/not-found' />
+			</Switch>
 		</main>
 	);
 };
