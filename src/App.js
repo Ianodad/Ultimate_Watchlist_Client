@@ -1,14 +1,17 @@
 import React from "react";
 
 import { Route, Switch, Redirect } from "react-router-dom";
-
+// import { ToastContainer } from "react-toastify";
 import Login from "./components/Login";
 import Movies from "./components/Movies";
 import NotFound from "./components/NotFound";
 import MovieDetails from "./components/MovieDetails";
 
+import "react-toastify/dist/ReactToastify.css";
+
 const App = () => {
 	return (
+		// <ToastContainer/>
 		<main className='container-fluid'>
 			<Switch>
 				<Route path='/movies/:id' component={MovieDetails} />

@@ -1,20 +1,22 @@
 import React, { Component } from "react";
 import MovieDetails from "./MovieDetails";
-import { getMovie } from "../../services/movies";
+import { getMovie } from "../../services/movieService";
 
 class index extends Component {
 	state = {
 		movieId: "",
 		movie: {}
 	};
-	componentDidMount() {
+	async componentDidMount() {
 		const movieId = this.props.match.params.id;
-		this.setState({ movieId, movie: getMovie(movieId) });
+		const { data: result } = await getMovie(movieId);
+		const movie = result[0];
+		this.setState({ movieId, movie });
 	}
 
 	render() {
 		const { movie } = this.state;
-		console.log(movie);
+		// console.log(movie);
 		return (
 			<div>
 				<MovieDetails movie={movie} />

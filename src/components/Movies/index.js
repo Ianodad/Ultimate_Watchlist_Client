@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import Movies from "./Movies";
-import { getMovies } from "../../services/movies";
+import { getMovies } from "../../services/movieService";
 class index extends Component {
 	state = { movies: [] };
 
-	componentDidMount() {
-		this.setState({ movies: getMovies() });
+	async componentDidMount() {
+		const { data: results } = await getMovies();
+		const movies = results.results;
+		this.setState({ movies });
 	}
 
 	render() {
