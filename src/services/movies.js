@@ -59,3 +59,7 @@ const movies = [
 export function getMovies() {
 	return movies;
 }
+export function getMovie(id) {
+	const idNew = parseInt(id);
+	return movies.find(m => m.id === idNew);
+}

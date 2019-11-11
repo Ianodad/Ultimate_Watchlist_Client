@@ -10,11 +10,11 @@ html {
 	color: #333;
 	font-family: "Nunito Sans", sans-serif;
 }
-body {
+.movie {
 	margin: 0;
 	padding: 0;
-	height: 100vh;
-	background-color: #ecf0f9;
+	height: 100%;
+	background-color: #1f2229;
 	background-attachment: fixed;
 }
 .content {
@@ -55,7 +55,7 @@ p.overview {
 	margin-left: 1rem;
 	margin-bottom: 3rem;
 }
-.card {
+.cardm {
 	color: inherit;
 	cursor: pointer;
 	width: calc(33% - 2rem);
@@ -67,12 +67,12 @@ p.overview {
 	position: relative;
 }
 @media screen and (max-width: 800px) {
-	.card {
+	.cardm {
 		width: calc(50% - 2rem);
 	}
 }
 @media screen and (max-width: 500px) {
-	.card {
+	.cardm {
 		width: 100%;
 	}
 }
@@ -114,10 +114,10 @@ p.overview {
 	opacity: 0.25;
 	z-index: -1;
 }
-.card:hover .front {
+.cardm:hover .front {
 	transform: rotateY(180deg);
 }
-.card:nth-child(even):hover .front {
+.cardm:nth-child(even):hover .front {
 	transform: rotateY(-180deg);
 }
 .back {
@@ -125,13 +125,13 @@ p.overview {
 	transform: rotateY(-180deg);
 	padding: 0 2em;
 }
-.card:hover .back {
+.cardm:hover .back {
 	transform: rotateY(0deg);
 }
-.card:nth-child(even) .back {
+.cardm:nth-child(even) .back {
 	transform: rotateY(180deg);
 }
-.card:nth-child(even):hover .back {
+.cardm:nth-child(even):hover .back {
 	transform: rotateY(0deg);
 }
 .button {
