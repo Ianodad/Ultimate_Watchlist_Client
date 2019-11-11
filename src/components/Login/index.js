@@ -4,6 +4,8 @@ import Joi from "joi-browser";
 
 import Login from "./Login";
 
+import "./Login.css";
+
 class index extends Component {
 	state = { account: { username: "", password: "" }, errors: {} };
 
@@ -64,7 +66,7 @@ class index extends Component {
 		// destructuring   state for better visibility
 		const { account, errors } = this.state;
 		return (
-			<div className=' container-fluid bg-dark' style={{ height: "100vh" }}>
+			<div className=' container-fluid login' style={{ height: "100vh" }}>
 				<div>
 					<Login
 						errors={errors}
