@@ -51,15 +51,14 @@ class index extends Component {
 		try {
 			const { account } = this.state;
 			// using headers to receive the token
-			const response = await postLogin(account.username, account.password);
-			console.log(response);
-			localStorage.setItem("token", response.headers["x-auth-token"]);
+			await postLogin(account.username, account.password);
 
 			// send token us data authentication
 			// const { data: jwt } = await postLogin(account.username, account.password);
 			// console.log(jwt);
 			// localStorage.setItem("token", jwt);
-			this.props.history.push("/movies");
+			window.location = "/movies";
+			// this.props.history.push("/movies");
 		} catch (ex) {
 			if (ex.response && ex.response.status === 400) {
 				const errors = { ...this.state.errors };
