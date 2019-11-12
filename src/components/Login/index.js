@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-
+import { Redirect } from "react-router-dom";
 import Joi from "joi-browser";
 
 import Login from "./Login";
-
-import { postLogin } from "../../services/authService";
+import { postLogin, getCurrentUser } from "../../services/authService";
 
 import "./Login.css";
 
@@ -82,6 +81,7 @@ class index extends Component {
 	};
 
 	render() {
+		if (getCurrentUser()) return <Redirect to='/movies' />;
 		// destructuring   state for better visibility
 		const { account, errors } = this.state;
 		return (
