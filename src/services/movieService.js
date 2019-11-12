@@ -1,6 +1,8 @@
 import http from "./httpService";
 
-const apiEndPoint = "http://localhost:5000/api/movies";
+import {apiUrl} from "../config.json";
+
+const apiEndPoint = `${apiUrl}/movies`;
 
 export function getMovies() {
 	return http.get(apiEndPoint);
