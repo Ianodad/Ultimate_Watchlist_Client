@@ -1,15 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Movies.css";
 import TextTruncate from "react-text-truncate";
 const Movies = ({ movies }) => {
 	return (
 		<div className='container-fluid movie'>
 			<div className='content'>
 				<h1 className='heading my-4 py-2'>WHAT'S ON THE WATCHLIST</h1>
-				<p className='description text-light'>
-					View you and know the latest show
-				</p>
+				<p className='description text-light'>View and know the latest shows</p>
 
 				{movies.map(movie => (
 					<div className='cardm'>

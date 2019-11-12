@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Movies from "./Movies";
+import "./Movies.css";
+
 import { getMovies } from "../../services/movieService";
 class index extends Component {
 	state = { movies: [] };

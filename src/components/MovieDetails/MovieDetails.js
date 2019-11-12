@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MovieDetail.css";
 // import TextTruncate from "react-text-truncate";
 
 const MovieDetails = ({ movie }) => {

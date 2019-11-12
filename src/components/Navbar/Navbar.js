@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "./Navbar.css";
-
-const Navbar = () => {
+const Navbar = ({ user }) => {
+	console.log(user);
 	return (
 		<nav className='navbar navbar-expand-sm bg-dark navbar-dark'>
 			<button
@@ -15,11 +14,13 @@ const Navbar = () => {
 			</button>
 			<div className='collapse navbar-collapse'>
 				<ul className='navbar-nav'>
-					<li className='nav-item active'>
-						<Link to='/' className='nav-link'>
-							Login
-						</Link>
-					</li>
+					{!user && (
+						<li className='nav-item active'>
+							<Link to='/' className='nav-link'>
+								Login
+							</Link>
+						</li>
+					)}
 					<li className='nav-item'>
 						<Link to='/movies' className='nav-link'>
 							Movies
@@ -35,6 +36,23 @@ const Navbar = () => {
 							About
 						</Link>
 					</li>
+					{user && (
+						<React.Fragment>
+							<li className='nav-item'>
+								<div className='nav-link'>
+									<span className='text-success text-uppercase mr-1'>
+										{user.username}
+									</span>
+									logged in
+								</div>
+							</li>
+							<li className='nav-item'>
+								<Link to='/logout' className='nav-link'>
+									Logout
+								</Link>
+							</li>
+						</React.Fragment>
+					)}
 				</ul>
 			</div>
 		</nav>

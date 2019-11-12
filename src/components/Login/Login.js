@@ -1,5 +1,4 @@
 import React from "react";
-import "./Login.css";
 
 import Input from "../common/Input";
 const Login = ({
@@ -13,8 +12,10 @@ const Login = ({
 	return (
 		<div className='loginForm d-flex  h-100'>
 			<div className='col-lg-5 col-xl-3 col-md-6 mx-auto my-auto'>
-				<h3 className='display-4 text-light text-center mb-4'>WELLCOME</h3>
-				<p className='text-muted mb-4 text-center'>Key in your credentials to login</p>
+				<h3 className='display-4 text-light text-center mb-4'>WELCOME</h3>
+				<p className='text-muted mb-4 text-center'>
+					Key in your credentials to login
+				</p>
 				<form onSubmit={handleSubmit}>
 					<Input
 						type='text'
