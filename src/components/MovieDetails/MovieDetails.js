@@ -5,8 +5,13 @@ import "./MovieDetail.css";
 
 const MovieDetails = ({ movie }) => {
 	return (
-		<div className=' container-fluid movieDetail'>
-			<div className='moviecard'>
+		<div className='movieDetailCard'>
+			<div className='movieHeader'>
+				<h2 className='text-light text-center text-uppercase font-weight-bold my-4'>
+					{movie.title}
+				</h2>
+			</div>
+			<div className='moviecard mt-4'>
 				<div
 					className='movie-poster'
 					style={{
@@ -17,7 +22,9 @@ const MovieDetails = ({ movie }) => {
 					<div className='movie-ratings'>
 						<span className='star'>★</span>
 						<span className='score'>{movie.vote_average}</span>
-						<span className='score-out-of'>/ 10 (IMDB)</span>
+						<span className='score-out-of'>
+							/ 10 <span className='text-primary'>({movie.vote_count})</span>
+						</span>
 					</div>
 					<div className='movie-title'>
 						<a
@@ -30,22 +37,21 @@ const MovieDetails = ({ movie }) => {
 						<span className='movie-year'>{movie.release_date}</span>
 					</div>
 					<div className='movie-details'>
-						<span className='movie-rating'>R</span>
-						<span className='movie-duration'>2h 1min</span>
+						<span className='movie-rating'>{movie.original_title}</span>
 						<span className='movie-genre'>Action, Crime, Drama</span>
 					</div>
 					<div className='movie-castcrew'>
 						<span className='title'>Director</span>
-						<span className='name'>Denis Villeneuve</span>
+						<span className='name'> Lorem ipsum </span>
 					</div>
 					<div className='movie-castcrew'>
 						<span className='title'>Writer</span>
-						<span className='name'>Taylor Sheridan</span>
+						<span className='name'>consectetur adipisicing</span>
 					</div>
 					<div className='movie-castcrew'>
 						<span className='title'>Cast</span>
 						<span className='name'>
-							Emily Blunt, Josh Brolin, Benicio Del Toro
+							Eaque perferendis, velit qua, Eaque perferendis
 						</span>
 					</div>
 					<div className='movie-synopsis'>

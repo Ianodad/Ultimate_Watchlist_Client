@@ -6,14 +6,18 @@ const Movies = ({ movies }) => {
 	return (
 		<div className='container-fluid movie'>
 			<div className='content'>
-				<h1 className='heading'>WHATS ON SHOW</h1>
-				<p className='description'>Hover over a card to flip it.</p>
+				<h1 className='heading my-4 py-2'>WHAT'S ON THE WATCHLIST</h1>
+				<p className='description text-light'>
+					View you and know the latest show
+				</p>
 
 				{movies.map(movie => (
 					<div className='cardm'>
 						<div
 							className='front'
-							style={{ backgroundImage: `url(http://image.tmdb.org/t/p/w200/${movie.poster_path})` }}
+							style={{
+								backgroundImage: `url(http://image.tmdb.org/t/p/w200/${movie.poster_path})`
+							}}
 						>
 							<p>{movie.title}</p>
 						</div>

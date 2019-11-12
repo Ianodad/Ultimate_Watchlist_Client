@@ -18,7 +18,7 @@ class index extends Component {
 		const { movie } = this.state;
 		// console.log(movie);
 		return (
-			<div>
+			<div className='container-fluid movieDetail'>
 				<MovieDetails movie={movie} />
 			</div>
 		);

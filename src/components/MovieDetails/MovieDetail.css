@@ -1,11 +1,14 @@
-@charset "UTF-8";
+/* @charset "UTF-8";
 * {
 	box-sizing: border-box;
-}
+} */
 
 .movieDetail {
-	background: #09041f;
+	background: #1f2229;
 	height: 100vh;
+}
+.movieDetailCard {
+	padding-top: 60px;
 }
 
 .moviecard {
@@ -13,7 +16,7 @@
 	position: relative;
 	background: #ffffff;
 	color: #555555;
-	margin: 50px auto;
+	margin: auto;
 	width: 850px;
 	max-width: 900px;
 	min-height: 300px;
@@ -136,11 +139,10 @@
 	width: 360px;
 	height: 540px;
 	right: -100px;
-	top: -8px;
+	top: 0px;
 	-moz-box-shadow: -2px 2px 7px rgba(243, 243, 243, 0.6);
 	-webkit-box-shadow: -2px 2px 7px rgba(245, 244, 244, 0.6);
 	box-shadow: -2px 2px 7px rgba(255, 255, 255, 0.6);
 	cursor: pointer;
-	transition: all 500ms ease-out;
 	z-index: 10;
 }

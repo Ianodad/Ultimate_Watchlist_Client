@@ -86,17 +86,15 @@ class index extends Component {
 		// destructuring   state for better visibility
 		const { account, errors } = this.state;
 		return (
-			<div className=' container-fluid login' style={{ height: "100vh" }}>
-				<div>
-					<Login
-						errors={errors}
-						username={account.username}
-						password={account.password}
-						handleSubmit={this.handleSubmit}
-						handleChange={this.handleChange}
-						validate={this.validate}
-					/>
-				</div>
+			<div className='container-fluid login' style={{ height: "100vh" }}>
+				<Login
+					errors={errors}
+					username={account.username}
+					password={account.password}
+					handleSubmit={this.handleSubmit}
+					handleChange={this.handleChange}
+					validate={this.validate}
+				/>
 			</div>
 		);
 	}
