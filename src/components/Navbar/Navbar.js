@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ user }) => {
-	console.log(user);
 	return (
 		<nav className='navbar navbar-expand-sm bg-dark navbar-dark'>
 			<button

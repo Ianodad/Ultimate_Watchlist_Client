@@ -1,6 +1,6 @@
 import http from "./httpService";
 
-import {apiUrl} from "../config.json";
+import { apiUrl } from "../config.json";
 
 const apiEndPoint = `${apiUrl}/movies`;
 
@@ -10,4 +10,18 @@ export function getMovies() {
 
 export function getMovie(id) {
 	return http.get(`${apiEndPoint}/${id}`);
+}
+
+export function getComments(id) {
+	console.log("got this far");
+	return http.get(`${apiEndPoint}/${id}/comments`);
+}
+
+export function postComment(movieId, comment, username) {
+	console.log(username);
+	return http.post(`${apiEndPoint}/${movieId}/comment`, {
+		movieId,
+		comment,
+		username
+	});
 }

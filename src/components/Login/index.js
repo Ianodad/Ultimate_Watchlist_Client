@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import Joi from "joi-browser";
 
 import Login from "./Login";
 import { postLogin, getCurrentUser } from "../../services/authService";
+import Joi from "joi-browser";
 
 import "./Login.css";
 

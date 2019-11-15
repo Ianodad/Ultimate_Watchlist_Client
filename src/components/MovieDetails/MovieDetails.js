@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MovieDetails = ({ movie }) => {
 	return (
-		<div className='movieDetailCard'>
+		<div className='movieDetailCard mx-auto'>
 			<div className='movieHeader'>
 				<h2 className='text-light text-center text-uppercase font-weight-bold my-4'>
 					{movie.title}
