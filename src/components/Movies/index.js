@@ -8,7 +8,7 @@ class index extends Component {
 
 	async componentDidMount() {
 		const { data: results } = await getMovies();
-		const movies = results.results;
+		const movies = results;
 		this.setState({ movies });
 	}
 
