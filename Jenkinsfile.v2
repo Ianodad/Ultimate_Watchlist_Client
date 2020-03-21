@@ -9,7 +9,8 @@ node {
       	 def myTestContainer = docker.image('node:12.3')
          myTestContainer.pull()
          myTestContainer.inside("-u root") {
-          sh 'npm install --only=dev'
+          sh 'npm install react-scripts'
+	  sh 'npm install --only=dev'
           sh 'npm start'
          }
        }
