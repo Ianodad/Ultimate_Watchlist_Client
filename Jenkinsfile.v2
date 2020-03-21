@@ -9,6 +9,7 @@ node {
       	 def myTestContainer = docker.image('node:12.3')
          myTestContainer.pull()
          myTestContainer.inside {
+	  sh -c "sudo chown -R Jenkins /github"
           sh 'npm install --only=dev'
           sh 'npm start'
          }
