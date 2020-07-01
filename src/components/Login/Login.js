@@ -43,6 +43,9 @@ const Login = ({
 						Login In
 					</button>
 				</form>
+				<p className="text-center" style={{color:"white"}}>
+					Username: <span style={{color:"red"}}><i><u>root</u></i></span> Password: <span style={{color:"red"}}><i><u>rootAdmin</u></i></span>
+				</p>
 			</div>
 		</div>
 	);
