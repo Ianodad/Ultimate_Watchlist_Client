@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-pod-watchlist
+  labels:
+    component: web
+spec:
+  containers:
+    - name: client
+      image: ianodad/watchlistclient
+      ports:
+        - containerPort: 80

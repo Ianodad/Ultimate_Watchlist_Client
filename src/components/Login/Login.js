@@ -40,7 +40,7 @@ const Login = ({
 						// type='submit'
 						className='btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm'
 					>
-						Login In
+						LogIn
 					</button>
 				</form>
 				<p className="text-center" style={{color:"white"}}>
